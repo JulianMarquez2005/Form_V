@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Formulario Aerolínea</title>
+  <link href="segundo.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="imagenes/viajar.png">
+  <script src="segundo.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Completa tus datos...</h1>
+    <form onsubmit="return validarFecha()">
+      <div class="form-group">
+        <fieldset>
+          <legend>Elige tu género</legend>
+          <label>
+            <input type="radio" name="gen" value="hombre"> Masculino
+          </label>
+          <label>
+            <input type="radio" name="gen" value="mujer"> Femenino
+          </label>
+          <label>
+            <input type="radio" name="gen" value="otro"> Personalizado
+          </label>
+        </fieldset>
+        <br>
+      </div>
+      <div class="form-group">
+        <label for="fechai">Fecha de ida:</label>
+        <input type="date" id="fechai">
+
+      </div>
+      <div class="form-group">
+        <label for="fechar">Fecha de regreso:</label>
+        <input type="date" id="fechar">
+
+      </div>
+      <div class="form-group">
+        <label for="dir">Dirección de residencia:</label>
+        <input type="text" id="dir" name="dir" onblur="validarDireccionResidencia()">
+
+      </div>
+      <div class="form-group">
+        <label for="dir">Edad:</label>
+        <input type="number" id="eda" name="eda" onblur="validarEdad()">
+      </div>
+
+      <div class="form-group">
+        <label for="dir">Teléfono:</label>
+        <input type="number" id="tel" name="tel" onblur="validarTel()">
+      </div>
+
+      <div class="form-group">
+        <label for="dir">Peso de equipaje en Kg:</label>
+        <input type="number" id="pes" name="pes" onblur="validarPes()">
+      </div>
+
+      <label for="dir">Ciudad de origen y destino del viaje:</label><br>
+      <select id="ciudad" class="form-group" onblur="validarSeleccion()">
+        <option value="">Selecciona una opción</option>
+        <option value="opcion1">BOGOTÁ - CALÍ</option>
+        <option value="opcion2">BOGOTÁ - MEDELLÍN</option>
+        <option value="opcion3">BOGOTÁ - MANIZALES</option>
+        <option value="opcion4">BOGOTÁ - BARRANQUILLA</option>
+        <option value="opcion5">CALÍ - BOGOTÁ</option>
+        <option value="opcion6">MEDELLÍN - BOGOTÁ</option>
+        <option value="opcion7">MANIZALES - BOGOTÁ</option>
+        <option value="opcion8">BARRANQUILLA - BOGOTÁ</option>
+      </select>
+
+
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</body>
+
+</html>
