@@ -117,7 +117,7 @@ if (!selValida) {
     }
   
     if (direccion.length > 30) {
-      alert('La dirección no es correcta. Debe tener máximo 30 caracteres.');
+      alert('La dirección no es correcta, debe tener máximo 30 caracteres.');
       setTimeout(function() {
       direccionInput.focus();
       }, 0);    
